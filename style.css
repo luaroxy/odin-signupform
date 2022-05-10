@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;400;600&display=swap');
+
+body{
+    margin:0;
+    background-color: rgb(211,213,212);
+    display: flex;
+    height: 100vh;
+}
+
+.mainImage{
+  background: url("https://images.unsplash.com/photo-1495521821757-a1efb6729352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=726&q=80");
+  width: 35vw;
+  /*height: 100vh;*/
+  background-size: cover;
+/*box-shadow: 5px 10px 8px #888888; */
+}
+
+.formContent{
+  background: rgb(241,242,244);
+}
+
+.beforeForm, .formContent, .afterForm{
+  width: 48vw;
+  padding-left: 2vw;
+  padding-right: 15vw;
+  padding-bottom: 2vw;
+
+}
+
+p{
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.30rem;
+  font-weight: bold;
+}
+
+.beforeForm{
+  padding-top: 15vh;
+}
+
+.afterForm{
+  padding-top: 2vh;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContent{
+  display:flex;
+  flex-direction:column;
+}
+
+.rowContainer{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10vw;
+}
