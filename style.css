@@ -11,17 +11,20 @@ body{
   background: url("https://images.unsplash.com/photo-1495521821757-a1efb6729352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=726&q=80");
   width: 35vw;
   background-size: cover;
+  display: flex;
+  justify-content: center;
 }
 
 .formContent{
   background: rgb(241,242,244);
+  box-shadow: 5px 10px 8px #888888ab;
 }
 
 .beforeForm, .formContent, .afterForm{
   width: 48vw;
   padding-left: 2vw;
   padding-right: 15vw;
-  padding-bottom: 2vw;
+  padding-bottom: 3vh;
 
 }
 
@@ -37,7 +40,7 @@ p{
 }
 
 .afterForm{
-  padding-top: 2vh;
+  padding-top: 5vh;
 }
 
 .container{
@@ -76,4 +79,22 @@ p{
 
 label{
     font-size: 0.8rem;
+}
+
+button{
+  padding: 1vh 2vw;
+  font-size: 0.8em;
+  margin-bottom: 2vh;
+  color: white;
+  background-color: rgb(164,92,49);
+  border-radius: 7px;
+}
+
+a{
+  color: rgb(164,92,49);
+}
+
+span{
+  position:absolute;
+  bottom:0;
 }
