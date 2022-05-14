@@ -7,7 +7,12 @@
 </head>
 <body> 
     <div class="mainImage">  
-        <span>
+  
+        <div class="bar">
+          <img src="images/logo.png" alt="Chef Hat">  
+          RECIPES
+        </div>
+        <span class="credits">
             Photo by <a href="https://unsplash.com/@ugmonk">Jeff Sheldon</a> on <a href="https://unsplash.com/">Unsplah</a>
         </span>
 
@@ -26,48 +31,48 @@
         
             <p> Let's do this!</p>
     
-            <form>     
+            <form id="signUpForm">     
                 <div class = "rowContainer">
                     <div class="inputContent">
-                        <label for="firstName">FIRST NAME</label>
-                        <input type="text" id="firstName">
+                        <label for="firstName">FIRST NAME<abbr title="required" aria-label="required">*</abbr></label>
+                        <input type="text" id="firstName" name="firstName" required>
                     </div>
     
                     <div class="inputContent">
-                        <label for="lastName">LAST NAME</label>
-                        <input type="text" id="lastName">
+                        <label for="lastName">LAST NAME<abbr title="required" aria-label="required">*</abbr></label>
+                        <input type="text" id="lastName" name="lastName" required>
                     </div>
                 </div>
     
                 <div class = "rowContainer">
                     <div class="inputContent">
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email">
+                        <label for="email">EMAIL<abbr title="required" aria-label="required">*</abbr></label>
+                        <input type="email" id="email" name="email" required>
                     </div>
     
                     <div class="inputContent">
-                        <label for="phoneNumber">PHONE NUMBER</label>
-                        <input type="tel" id="phoneNumber">
+                        <label for="phoneNumber">PHONE NUMBER<abbr title="required" aria-label="required">*</abbr></label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required>
                     </div>
                 </div>
     
                 <div class = "rowContainer">
                     <div class="inputContent">
-                        <label for="user_password">PASSWORD</label>
-                        <input type="password" id="user_password">
+                        <label for="user_password">PASSWORD<abbr title="required" aria-label="required">*</abbr></label>
+                        <input type="password" id="user_password" name="user_password" required>
                     </div>
     
                     <div class="inputContent">
-                        <label for="user_confirmPassword">CONFIRM PASSWORD</label>
-                        <input type="password" id="user_confirmPassword">
+                        <label for="user_confirmPassword">CONFIRM PASSWORD<abbr title="required" aria-label="required">*</abbr></label>
+                        <input type="password" id="user_confirmPassword" name="user_confirmPassword" required>
+                      <span class="error"></span>
                     </div>
                 </div>
-    
             </form>
         </div>
           
         <div class="afterForm"> 
-            <button>Create Account</button>
+            <button type="submit" form="signUpForm">Create Account</button>
             <p>Already have an account? <a href="">Log in</a></p>
         </div> 
       

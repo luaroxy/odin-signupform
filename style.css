@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;400;600&family=Roboto+Mono:wght@200&family=Macondo&display=swap');
 
 body{
     margin:0;
@@ -7,32 +7,59 @@ body{
     height: 100vh;
 }
 
+p{
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.10rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+a{
+  color: rgb(164,92,49);
+}
+
+
+/* Image side */
 .mainImage{
-  background: url("https://images.unsplash.com/photo-1495521821757-a1efb6729352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=726&q=80");
+  background: url(images/mainimage.jpg);
   width: 35vw;
   background-size: cover;
   display: flex;
   justify-content: center;
 }
 
-.formContent{
-  background: rgb(241,242,244);
-  box-shadow: 5px 10px 8px #888888ab;
+.credits{
+  position:absolute;
+  bottom:0;
 }
 
+.bar{
+  position:absolute;
+  top: 17vh;
+  background-color: rgba(164,92,49,0.3);
+  width: 35vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8rem;
+  font-family: 'Macondo', cursive;
+  padding: 16px 0;
+  color: rgb(241,242,244);
+  letter-spacing: .08em;
+  text-shadow: 1px 1px 2px black;
+}
+
+img{
+  width: 70px;
+}
+
+
+/* Before and After Form Sections */
 .beforeForm, .formContent, .afterForm{
   width: 48vw;
   padding-left: 2vw;
   padding-right: 15vw;
   padding-bottom: 3vh;
-
-}
-
-p{
-  font-family: 'Heebo', sans-serif;
-  font-size: 1.10rem;
-  font-weight: bold;
-  margin: 0;
 }
 
 .beforeForm{
@@ -48,6 +75,33 @@ p{
   flex-direction: column;
 }
 
+.beforeForm > p{
+  margin-bottom: 3vh;
+}
+
+.afterForm > p{
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+button{
+  padding: 1vh 2vw;
+  font-size: 0.8em;
+  margin-bottom: 2vh;
+  color: white;
+  background-color: rgb(164,92,49);
+  border-radius: 7px;
+  letter-spacing: .1em;
+}
+
+
+/* Form */
+
+.formContent{
+  background: rgb(241,242,244);
+  box-shadow: 5px 10px 8px #888888ab;
+}
+
 .inputContent{
   display:flex;
   flex-direction:column;
@@ -59,18 +113,9 @@ p{
   padding-right: 10vw;
 }
 
-.beforeForm > p{
-    margin-bottom: 3vh;
-}
-
 .formContent > p{
     margin-bottom: 2vh;
     margin-top: 2vh;
-}
-
-.afterForm > p{
-    font-size: 0.8rem;
-    font-weight: normal;
 }
 
 .rowContainer{
@@ -78,23 +123,33 @@ p{
 }
 
 label{
-    font-size: 0.8rem;
+  font-size: 0.8rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 625;
+  letter-spacing: .06rem;
 }
 
-button{
-  padding: 1vh 2vw;
-  font-size: 0.8em;
-  margin-bottom: 2vh;
-  color: white;
-  background-color: rgb(164,92,49);
-  border-radius: 7px;
+input:focus{
+   outline: none !important;
+   border:2px solid rgb(164,92,49);
+   box-shadow: 0 0 10px #888888ab;
 }
 
-a{
-  color: rgb(164,92,49);
+#user_confirmPassword:focus{
+  border:2px solid red;
 }
 
-span{
-  position:absolute;
-  bottom:0;
+input{
+  border-radius: 5px;
+}
+
+#user_confirmPassword:focus + span::after{
+    content:"*Passwords do not match";
+}
+
+.error{
+  font-size: 0.7rem;
+  color: red;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
 }
