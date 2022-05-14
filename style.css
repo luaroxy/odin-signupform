@@ -59,11 +59,10 @@ img{
   width: 48vw;
   padding-left: 2vw;
   padding-right: 15vw;
-  padding-bottom: 3vh;
 }
 
-.beforeForm{
-  padding-top: 12vh;
+.beforeForm,.formContent{
+ padding-bottom: 3vh;
 }
 
 .afterForm{
@@ -73,6 +72,7 @@ img{
 .container{
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .beforeForm > p{
@@ -141,6 +141,8 @@ input:focus{
 
 input{
   border-radius: 5px;
+  width: 130%;
+  box-sizing: border-box;
 }
 
 #user_confirmPassword:focus + span::after{
